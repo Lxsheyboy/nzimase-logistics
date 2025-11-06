@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nzimase Logistics (PTY)LTD</title>
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" type="image/png" href="images/logo.png" />
+</head>
+
+<body>
+  <!-- ===== HEADER SECTION ===== -->
+  <header class="header">
+    <nav class="nav" id="navbar">
+      <div class="logo">
+        <img src="ChatGPT Image Oct 10, 2025, 01_58_21 PM.png" alt="Nzimase Logistics (PTY) LTD logo" width="50" height="150" />
+      </div>
+      <!--- HAMBURGER ICON --->
+      <div class="hamburger" id="hamburger">
+        <i class=""fas fa-bars"></i>
+      </div>
+
+      
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO SECTION WITH SLIDESHOW ===== -->
+  <div class="hero-slider">
+    <div class="slide active">
+      <img src="TLB working the ground.jpg" alt="Truck 1" />
+    </div>
+
+    <div class="slide">
+      <img src="Front end loader.jpg" alt="Front end loader" />
+    </div>
+
+    <div class="slide">
+      <img src="wwww.jpg" alt="HYUNDAII truck" />
+    </div>
+
+   <div class="slide">
+      <img src="Yellow Trackor landscape.png" alt="VOLVO truck" width="300" height="200" />
+    </div>
+
+    <div class="slide">
+      <img src="Volvo Landscape.png" alt="VOLVO truck" />
+    </div>
+
+
+
+    <!-- Overlay Text -->
+    <div class="hero-overlay">
+      <h1>Reliable. Efficient. Driven.</h1>
+      <p>Delivering Excellence in Transport and Logistics across Southern Africa.</p>
+      <a href="#about" class="main-btn">Learn More</a>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT SECTION ===== -->
+<section id="about" class="about">
+  <h2>Nzimase Logistics</h2>
+  <p>
+    At Nzimase Logistics, we specialize in providing reliable, fast, and cost-effective transport solutions across South Africa.
+    Our mission is to deliver excellence through precision, integrity, and technology-driven logistics services.
+    
+  </p>
+
+  <div class="about-cards">
+    <div class="card-container">
+      <div class="content">
+        <h2>Our Mission</h2>
+        <p>To simplify logistics for every business through innovation, transparency, and efficiency.</p>
+      
+      </div>
+    </div>
+
+    <div class="card-container">
+      <div class="content">
+        <h2>Our Vision</h2>
+        <p>We aim to redefine transport and logistics in Southern Africa, 
+          setting the gold standard for efficiency, reliability, and forward-thinking solutions.
+        </p>
+        
+      </div>
+    </div>
+
+    <div class="card-container">
+      <div class="content">
+        <h2>Our Values</h2>
+        <p>Integrity, professionalism, and commitment to delivering on time, every time.</p>
+       
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer_card">
+      <h1 class="footer_card-title">About</h1>
+      <p class="footer_card-info"><a href="about.html">General Info</a></p>
+      <p class="footer_card-info"><a href="tariffs.html">Tariffs</a></p>
+      <p class="footer_card-info"><a href="faq.html">FAQ</a></p>
+    </div>
+  
+    <div class="footer_card">
+      <h1 class="footer_card-title">Legal</h1>
+      <p class="footer_card-info"><a href="privacy.html">Privacy Policy</a></p>
+      <p class="footer_card-info"><a href="terms.html">Terms of Use</a></p>
+      <p class="footer_card-info"><a href="payments.html">Payments</a></p>
+    </div>
+  
+    <div class="footer_card">
+      <h1 class="footer_card-title">Connect</h1>
+      <p class="footer_card-info">
+        <a href="https://www.tiktok.com/@nzimaselogistics?_t=ZS-90lKOIKh9DM&_r=1" target="_blank">
+          <i class="fab fa-tiktok"></i> TikTok
+        </a>
+      </p>
+      <p class="footer_card-info">
+        <a href="https://www.instagram.com/nzimaseholdings?igsh=MW4wN2Nwc2FqY2QyZw==" target="_blank">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </p>
+      <p class="footer_card-info">
+        <a href="https://www.facebook.com/nzimase_logistics" target="_blank">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+      </p>
+    </div>
+  </footer>
+  
+
+   <!---- COPYRIGHT BAR ---->
+   <div class="footer-bottom">
+    <p>© 2025 Nzimase Logistics (Pty) Ltd – All Rights Reserved.</p>
+   </div>
+ 
+
+  <!-- ===== INTERNAL JAVASCRIPT ===== -->
+  <script>
+    // ===============================
+    // Nzimase Logistics - Hero Slider + Navbar Scroll
+    // ===============================
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // ===== HERO SLIDER =====
+      let slideIndex = 0;
+      const slides = document.querySelectorAll(".slide");
+      const navbar = document.getElementById("navbar");
+      let lastScrollTop = 0;
+
+      if (slides.length === 0) {
+        console.warn("No slides found in .slide class. Check your HTML structure.");
+        return;
+      }
+
+      function showSlides() {
+        slides.forEach((slide) => slide.classList.remove("active"));
+
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].classList.add("active");
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
+      }
+
+      showSlides();
+
+      // ===== NAVBAR HIDE ON SCROLL =====
+      window.addEventListener("scroll", function () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+          // Scrolling down → hide navbar
+          navbar.classList.add("hidden");
+        } else {
+          // Scrolling up → show navbar
+          navbar.classList.remove("hidden");
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      });
+    });
+  </script>
+</body>
+</html>
